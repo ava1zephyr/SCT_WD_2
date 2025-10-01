@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="theme-toggle">
+    <button id="toggleTheme" aria-label="Switch theme">
+      <svg id="iconLight" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 
+          6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 
+          0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 
+          0 11-8 0 4 4 0 018 0z"/>
+      </svg>
+      <svg id="iconDark" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M20.354 15.354A9 9 0 018.646 
+          3.646 9.003 9.003 0 0012 21a9.003 9.003 0 
+          008.354-5.646z"/>
+      </svg>
+    </button>
+  </div>
+
+  <main class="wrapper">
+    <header>
+      <h1>Stopwatch</h1>
+      <p class="subtitle">Track time with laps and theme switching.</p>
+    </header>
+
+    <section class="stopwatch">
+      <div class="display">
+        <div id="time">00:00:00</div>
+        <div class="time-label">MM:SS:MS</div>
+      </div>
+      <div class="controls">
+        <button id="btnStartPause" class="btn primary">Start</button>
+        <button id="btnReset" class="btn">Reset</button>
+        <button id="btnLap" class="btn accent" disabled>Lap</button>
+      </div>
+    </section>
+
+    <section id="lapsSection" class="laps hidden">
+      <div class="laps-header">
+        <h2>Laps</h2>
+        <button id="btnClearLaps" class="btn-clear">Clear</button>
+      </div>
+      <div id="lapsList" class="laps-list"></div>
+      <div id="lapsEmpty" class="empty">
+        <p>No laps yet</p>
+        <small>Start the timer and hit "Lap"</small>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
